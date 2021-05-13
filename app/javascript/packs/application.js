@@ -33,4 +33,3 @@ Sentry.init({
 
 console.log('Hello World from Webpacker')
 
-myUndefinedFunction();
