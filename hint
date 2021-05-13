@@ -1,0 +1,4 @@
+---
+:exception: !ruby/exception:ZeroDivisionError
+  message: ajsdlkf jsdff
+  backtrace:

@@ -1,0 +1,311 @@
+--- !ruby/object:Sentry::Event
+configuration: !ruby/object:Sentry::Configuration
+  background_worker_threads: 6
+  max_breadcrumbs: 100
+  breadcrumbs_logger:
+  - :active_support_logger
+  context_lines: 3
+  environment: development
+  enabled_environments: []
+  exclude_loggers: []
+  excluded_exceptions:
+  - Mongoid::Errors::DocumentNotFound
+  - Rack::QueryParser::InvalidParameterError
+  - Rack::QueryParser::ParameterTypeError
+  - Sinatra::NotFound
+  - AbstractController::ActionNotFound
+  - ActionController::BadRequest
+  - ActionController::InvalidAuthenticityToken
+  - ActionController::InvalidCrossOriginRequest
+  - ActionController::MethodNotAllowed
+  - ActionController::NotImplemented
+  - ActionController::ParameterMissing
+  - ActionController::RoutingError
+  - ActionController::UnknownAction
+  - ActionController::UnknownFormat
+  - ActionDispatch::Http::MimeNegotiation::InvalidType
+  - ActionController::UnknownHttpMethod
+  - ActionDispatch::Http::Parameters::ParseError
+  - ActiveRecord::RecordNotFound
+  inspect_exception_causes_for_exclusion: true
+  linecache: &1 !ruby/object:Sentry::LineCache
+    cache: {}
+  logger: !ruby/object:ActiveSupport::Logger
+    level: 0
+    progname:
+    default_formatter: !ruby/object:Logger::Formatter
+      datetime_format:
+    formatter: !ruby/object:ActiveSupport::Logger::SimpleFormatter
+      datetime_format:
+      thread_key: activesupport_tagged_logging_tags:7140
+    logdev: !ruby/object:Logger::LogDevice
+      shift_period_suffix: "%Y%m%d"
+      shift_size: 1048576
+      shift_age: 0
+      filename: "/Users/vasylmelnychuk/projects/toptal/sentry-test/log/development.log"
+      dev: !ruby/object:File {}
+      binmode: false
+      mon_data: !ruby/object:Monitor {}
+      mon_data_owner_object_id: 3560
+  project_root: "/Users/vasylmelnychuk/projects/toptal/sentry-test"
+  release:
+  sample_rate: 1.0
+  send_modules: true
+  send_default_pii: false
+  trusted_proxies: []
+  server_name: sqrel.local
+  before_send: !ruby/object:Proc {}
+  rack_env_whitelist:
+  - REMOTE_ADDR
+  - SERVER_NAME
+  - SERVER_PORT
+  transport: !ruby/object:Sentry::Transport::Configuration
+    ssl_verification: true
+    open_timeout: 1
+    timeout: 2
+    encoding: gzip
+  gem_specs: &3
+    rake: 13.0.3
+    concurrent-ruby: 1.1.8
+    i18n: 1.8.10
+    minitest: 5.14.4
+    tzinfo: 2.0.4
+    zeitwerk: 2.4.2
+    activesupport: 6.1.3.1
+    builder: 3.2.4
+    erubi: 1.10.0
+    racc: 1.5.2
+    nokogiri: 1.11.2
+    rails-dom-testing: 2.0.3
+    crass: 1.0.6
+    loofah: 2.9.0
+    rails-html-sanitizer: 1.3.0
+    actionview: 6.1.3.1
+    rack: 2.2.3
+    rack-test: 1.1.0
+    actionpack: 6.1.3.1
+    nio4r: 2.5.7
+    websocket-extensions: 0.1.5
+    websocket-driver: 0.7.3
+    actioncable: 6.1.3.1
+    globalid: 0.4.2
+    activejob: 6.1.3.1
+    activemodel: 6.1.3.1
+    activerecord: 6.1.3.1
+    marcel: 1.0.0
+    mini_mime: 1.0.3
+    activestorage: 6.1.3.1
+    mail: 2.7.1
+    actionmailbox: 6.1.3.1
+    actionmailer: 6.1.3.1
+    actiontext: 6.1.3.1
+    bindex: 0.8.1
+    bundler: 2.2.12
+    byebug: 11.1.3
+    faraday-net_http: 1.0.1
+    multipart-post: 2.1.1
+    ruby2_keywords: 0.0.4
+    faraday: 1.3.0
+    ffi: 1.15.0
+    jbuilder: 2.11.2
+    method_source: 1.0.0
+    puma: 5.2.2
+    rack-mini-profiler: 2.3.1
+    thor: 1.1.0
+    railties: 6.1.3.1
+    sprockets: 4.0.2
+    sprockets-rails: 3.2.2
+    rails: 6.1.3.1
+    sassc: 2.4.0
+    tilt: 2.0.10
+    sassc-rails: 2.1.2
+    sass-rails: 6.0.0
+    sentry-ruby-core: 4.3.1
+    sentry-rails: 4.3.3
+    sentry-ruby: 4.3.1
+    sqlite3: 1.4.2
+    web-console: 4.1.0
+  rails: !ruby/object:Sentry::Rails::Configuration
+    report_rescued_exceptions: true
+    skippable_job_adapters: []
+  dsn: !ruby/object:Sentry::DSN
+    raw_value: https://bab891063fe2410d806335bc994de8c9@o562418.ingest.sentry.io/5700936
+    project_id: '5700936'
+    public_key: bab891063fe2410d806335bc994de8c9
+    secret_key:
+    scheme: https
+    host: o562418.ingest.sentry.io
+    port: 443
+    path: ''
+  traces_sample_rate: 1
+  traces_sampler: !ruby/object:Proc {}
+  backtrace_cleanup_callback: &2 !ruby/object:Proc {}
+  excluded_exception_classes:
+  -
+  - !ruby/class 'Rack::QueryParser::InvalidParameterError'
+  - !ruby/class 'Rack::QueryParser::ParameterTypeError'
+  -
+  - !ruby/class 'AbstractController::ActionNotFound'
+  - !ruby/class 'ActionController::BadRequest'
+  -
+  -
+  - !ruby/class 'ActionController::MethodNotAllowed'
+  - !ruby/class 'ActionController::NotImplemented'
+  - !ruby/class 'ActionController::ParameterMissing'
+  - !ruby/class 'ActionController::RoutingError'
+  -
+  - !ruby/class 'ActionController::UnknownFormat'
+  - !ruby/class 'ActionDispatch::Http::MimeNegotiation::InvalidType'
+  - !ruby/class 'ActionController::UnknownHttpMethod'
+  - !ruby/class 'ActionDispatch::Http::Parameters::ParseError'
+  - !ruby/class 'ActiveRecord::RecordNotFound'
+  stacktrace_builder: !ruby/object:Sentry::StacktraceBuilder
+    project_root: "/Users/vasylmelnychuk/projects/toptal/sentry-test"
+    app_dirs_pattern:
+    linecache: *1
+    context_lines: 3
+    backtrace_cleanup_callback: *2
+  errors: []
+event_id: a0abec336e03488c8d6ee050245f4758
+timestamp: '2021-04-10T20:48:29Z'
+platform: :ruby
+sdk:
+  name: sentry.ruby
+  version: 4.3.1
+user: {}
+extra: {}
+contexts:
+  :os:
+    :name: Darwin
+    :version: 'Darwin Kernel Version 20.3.0: Thu Jan 21 00:07:06 PST 2021; root:xnu-7195.81.3~1/RELEASE_X86_64'
+    :build: 20.3.0
+    :kernel_version: 'Darwin Kernel Version 20.3.0: Thu Jan 21 00:07:06 PST 2021;
+      root:xnu-7195.81.3~1/RELEASE_X86_64'
+  :runtime:
+    :name: ruby
+    :version: ruby 3.0.0p0 (2020-12-25 revision 95aff21468) [x86_64-darwin20]
+tags: {}
+fingerprint: []
+server_name: sqrel.local
+environment: development
+release:
+modules: *3
+message: ''
+level: :error
+exception: !ruby/object:Sentry::ExceptionInterface
+  values:
+  - !ruby/object:Sentry::SingleExceptionInterface
+    type: ZeroDivisionError
+    value: ajsdlkf jsdff
+    module: ''
+    thread_id: 8480
+    stacktrace:
+threads: !ruby/object:Sentry::ThreadsInterface
+  id: 8480
+  name:
+  current: true
+  crashed: true
+  stacktrace:
+transaction:
+breadcrumbs: !ruby/object:Sentry::BreadcrumbBuffer
+  buffer:
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
