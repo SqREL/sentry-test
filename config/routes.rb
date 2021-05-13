@@ -3,4 +3,6 @@ Rails.application.routes.draw do
   post '/webhooks/sentry', to: 'tests#create'
 
   get '/error', to: 'tests#show'
+
+  root 'tests#index'
 end

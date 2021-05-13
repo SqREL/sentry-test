@@ -29,4 +29,8 @@ class TestsController < ApplicationController
     "sending exception"
     raise CustomErrorFour, "error new 1"
   end
+
+  def index
+    
+  end
 end

@@ -39,3 +39,4 @@ gem "sentry-ruby"
 gem "sentry-rails"
 
 gem "pry-rails"
+gem 'webpacker'
