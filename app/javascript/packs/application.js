@@ -23,6 +23,7 @@ import { Integrations } from "@sentry/tracing";
 Sentry.init({
   dsn: "https://6686d9b02a314ec38296dc4fcd9b0f44@o562418.ingest.sentry.io/5763889",
   integrations: [new Integrations.BrowserTracing()],
+  release: "cedab62417b4a2cc8143d5d3b878707bc5eb403e",
 
   // Set tracesSampleRate to 1.0 to capture 100%
   // of transactions for performance monitoring.
